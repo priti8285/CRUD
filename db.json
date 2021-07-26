@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "productName": "ttt",
+      "productTyp": "",
+      "unitType": "gold",
+      "Price": "",
+      "isInStockType": "gold",
+      "id": 2
+    },
+    {
+      "productName": "kishan",
+      "productTyp": null,
+      "unitType": "gold",
+      "Price": null,
+      "isInStockType": "silver",
+      "id": 3
+    },
+    {
+      "productName": null,
+      "productTyp": null,
+      "unitType": null,
+      "Price": null,
+      "isInStockType": null,
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

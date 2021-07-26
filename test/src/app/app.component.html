@@ -1,0 +1,103 @@
+<div class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+      <h1 style="color: aliceblue">Crud Operation</h1>
+      <div class="d-flex">
+          <button type="button" (click)="clickaddemply()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Add
+              Products</button>
+      </div>
+  </div>
+</div>
+
+<table class="table mt-3">
+  <thead>
+      <tr>
+          <th scope="col">ProductName</th>
+          <th scope="col">ProductType </th>
+          <th scope="col">Unit</th>
+          <th scope="col">Price</th>
+          <th scope="col">IsInStock </th>
+         </tr>
+  </thead>
+  <tbody>
+      <tr  *ngFor="let row of employeedata">
+          <!-- <td>maruti</td>
+          <td>tripathi</td>
+          <td>pri@gmail.com</td>
+          <td>98765554</td>
+          <td>98765554</td> -->
+
+
+         <td>{{row.productName}}</td>
+          <td>{{row.productTyp}}</td>
+          <td>{{row.unitType}}</td>
+          <td>{{row.Price}}</td>
+          <td>{{row.isInStockType}}</td> 
+         <td>
+              <button (click)="onedit(row)" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+              <button  (click)="deleteempl(row)"  class="btn btn-danger mx-3">Delete</button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Product Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form [formGroup]="FormData">
+                  <div class="mb-3"> 
+                    <label for="exampleInputfirstname" class="form-label">product Name</label>
+                    <input type="text" formControlName="productName" class="form-control"  aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputlastname" class="form-label"> Product Type</label>
+                    <!-- <input type="text" formControlName="lastName" class="form-control" id="exampleInputPassword1"> -->
+                     <select class="form-select" formControlName="productType" id="selectType" aria-label="Default select example">
+                      <option value="gold">Gold</option>
+                      <option value="silver">Silver</option>
+                    </select> 
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputemail" class="form-label">Unit</label>
+                      <select class="form-select" formControlName="unitType" id="selectType" aria-label="Default select example">
+                        <option value="gold">Kg</option>
+                        <option value="silver">gm</option>
+                      </select> 
+                    </div>
+                  
+                    <div class="mb-3">
+                      <label for="exampleInputsalary" class="form-label">Price</label>
+                      <input type="text" formControlName="price" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputemail" class="form-label">IsInStock</label>
+                      <select class="form-select" formControlName="isInStockType" id="selectType" aria-label="Default select example">
+                        <option value="gold">0</option>
+                        <option value="silver">1</option>
+                      </select> 
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" *ngIf="ShowAdd" (click)="postempdetails()"  class="btn btn-primary">Add</button>
+                      <button type="submit" *ngIf="Showupdate" (click)="updatempdetail()" class="btn btn-primary">Update</button>
+      
+                  </div> -->
+                  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" (click)="postempdetails()"   class="btn btn-primary">Add</button>
+              <button type="button" (click)="updatempdetail()"  class="btn btn-primary"> Update</button>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
