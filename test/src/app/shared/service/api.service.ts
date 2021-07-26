@@ -8,24 +8,24 @@ import { map, catchError } from 'rxjs/operators';
 export class ApiService {
   constructor(private http: HttpClient) { }
 
-  postempl(data: any) {
+  PostProduct(data: any) {
     return this.http.post<any>("http://localhost:3000/posts", data)
       .pipe(map((res: any)=>{
         return res;
       }))
-  }getempl() {
+  }GetProduct() {
     return this.http.get<any>("http://localhost:3000/posts")
       .pipe(map((res: any) => {
         return res;
       }))
   }
-  updateempl(data: any, id:number) {
+  UpdateProduct(data: any, id:number) {
     return this.http.put<any>("http://localhost:3000/posts/"+id, data)
       .pipe(map((res: any) => {
         return res;
       }))
   }
-  deltempl(id:number) {
+  DeleteProduct(id:number) {
     return this.http.delete<any>("http://localhost:3000/posts/"+id)
       .pipe(map((res: any) => {
         return res;

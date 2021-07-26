@@ -33,8 +33,8 @@
           <td>{{row.Price}}</td>
           <td>{{row.isInStockType}}</td> 
          <td>
-              <button (click)="onedit(row)" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
-              <button  (click)="deleteempl(row)"  class="btn btn-danger mx-3">Delete</button>
+              <button (click)="ProductEdit(row)" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+              <button  (click)="DeltProduct(row)"  class="btn btn-danger mx-3">Delete</button>
           </td>
       </tr>
   </tbody>
@@ -92,8 +92,8 @@
           </div>
           <div class="modal-footer">
               <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" (click)="postempdetails()"   class="btn btn-primary">Add</button>
-              <button type="button" (click)="updatempdetail()"  class="btn btn-primary"> Update</button>
+              <button type="button" (click)="postProductdetails()"   class="btn btn-primary">Add</button>
+              <button type="button" (click)="updateProductdetails()"  class="btn btn-primary"> Update</button>
 
           </div>
       </div>

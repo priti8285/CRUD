@@ -27,14 +27,14 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.employeedata;
-    this.getAllempl();
+    this.getAllProduct;
   }
   clickaddemply(){
     this.FormData.reset();
     // this.ShowAdd = true;
     // this.Showupdate = false
   }
-postempdetails(){
+postProductdetails(){
   console.log(this.FormData)
   // this.Employeemodelobj.FirstNsame = this.FormValu.value.selectType;
   this.Employeemodelobj.productName = this.FormData.value.productName;
@@ -43,7 +43,7 @@ postempdetails(){
   this.Employeemodelobj.Price = this.FormData.value.Price;
   this.Employeemodelobj.isInStockType = this.FormData.value.isInStockType;
 
-  this.api.postempl(this.Employeemodelobj)
+  this.api.PostProduct(this.Employeemodelobj)
    .subscribe(res =>{
     alert("emply add success")
     console.log(this.Employeemodelobj);
@@ -56,18 +56,18 @@ postempdetails(){
       alert("somthing")
     })
 }
-getAllempl() {
-  this.api.getempl().subscribe(res => {
+getAllProduct() {
+  this.api.GetProduct().subscribe(res => {
     this.employeedata = res;
   })
 }
-deleteempl(row: any) {
-  this.api.deltempl(row.id).subscribe(res=>{
+DeltProduct(row: any) {
+  this.api.DeleteProduct(row.id).subscribe(res=>{
     alert('emply delte')
-    this.getAllempl();
+    this.getAllProduct;
   })
 }
-onedit(row: any) {
+ProductEdit(row: any) {
 
   // this.ShowAdd = false;
   // this.Showupdate = true;
@@ -79,7 +79,7 @@ onedit(row: any) {
   this.FormData.controls['isInStockType'].setValue(row.isInStockType);
 
 }
-updatempdetail(){
+updateProductdetails(){
   this.Employeemodelobj.productName = this.FormData.value;
   console.log(this.Employeemodelobj.productName)
   this.Employeemodelobj.productTyp = this.FormData.value.productTyp;
@@ -87,13 +87,13 @@ updatempdetail(){
   this.Employeemodelobj.Price = this.FormData.value.Price;
   this.Employeemodelobj.isInStockType = this.FormData.value.isInStockType;
 
-this.api.updateempl(this.Employeemodelobj,this.Employeemodelobj.id=0).subscribe(res => {
+this.api.UpdateProduct(this.Employeemodelobj,this.Employeemodelobj.id=0).subscribe(res => {
    console.log(this.Employeemodelobj);
     alert('update success');
     let ref = document.getElementById('cancle')
     ref?.click();
     this.FormData.reset();
-    this.getAllempl();
+    this.getAllProduct;
   })
 }
 
