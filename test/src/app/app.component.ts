@@ -29,7 +29,7 @@ export class AppComponent {
     this.employeedata;
     this.getAllProduct;
   }
-  clickaddemply(){
+  clickAddProduct(){
     this.FormData.reset();
     // this.ShowAdd = true;
     // this.Showupdate = false
@@ -50,7 +50,7 @@ postProductdetails(){
     let ref = document.getElementById('cancel')
     ref?.click();
     this.FormData.reset();
-    // this.getAllempl();
+    this.getAllProduct();
   },
     err => {
       alert("somthing")
@@ -75,7 +75,7 @@ ProductEdit(row: any) {
   this.FormData.controls['productName'].setValue(row.productName)
   this.FormData.controls['productTyp'].setValue(row.productTyp);
   this.FormData.controls['unitType'].setValue(row.unitType);
-  this.FormData.controls['Price'].setValue(row.Price);
+  this.FormData.controls['price'].setValue(row.price);
   this.FormData.controls['isInStockType'].setValue(row.isInStockType);
 
 }
@@ -87,7 +87,7 @@ updateProductdetails(){
   this.Employeemodelobj.Price = this.FormData.value.Price;
   this.Employeemodelobj.isInStockType = this.FormData.value.isInStockType;
 
-this.api.UpdateProduct(this.Employeemodelobj,this.Employeemodelobj.id=0).subscribe(res => {
+this.api.UpdateProduct(this.Employeemodelobj,this.Employeemodelobj.id).subscribe(res => {
    console.log(this.Employeemodelobj);
     alert('update success');
     let ref = document.getElementById('cancle')

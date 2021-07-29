@@ -1,5 +1,5 @@
 export class Emplyeemodel{
-    id?: number;
+    id = 0;
     productName: string =  "";
     productTyp:  string = "";
     unitType: string  = "";

@@ -12,6 +12,54 @@
       "Price": null,
       "isInStockType": null,
       "id": 2
+    },
+    {
+      "productName": "priti",
+      "productTyp": null,
+      "unitType": "silver",
+      "Price": null,
+      "isInStockType": "silver",
+      "id": 3
+    },
+    {
+      "productName": null,
+      "productTyp": null,
+      "unitType": null,
+      "Price": null,
+      "isInStockType": null,
+      "id": 4
+    },
+    {
+      "productName": null,
+      "productTyp": null,
+      "unitType": null,
+      "Price": null,
+      "isInStockType": null,
+      "id": 5
+    },
+    {
+      "productName": "dfgvh",
+      "productTyp": null,
+      "unitType": "gold",
+      "Price": null,
+      "isInStockType": "gold",
+      "id": 6
+    },
+    {
+      "productName": "prii",
+      "productTyp": null,
+      "unitType": "silver",
+      "Price": null,
+      "isInStockType": "silver",
+      "id": 7
+    },
+    {
+      "productName": "dsff",
+      "productTyp": null,
+      "unitType": "gold",
+      "Price": null,
+      "isInStockType": "gold",
+      "id": 8
     }
   ],
   "comments": [

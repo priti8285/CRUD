@@ -2,7 +2,7 @@
   <div class="container-fluid">
       <h1 style="color: aliceblue">Crud Operation</h1>
       <div class="d-flex">
-          <button type="button" (click)="clickaddemply()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Add
+          <button type="button" (click)="clickAddProduct()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Add
               Products</button>
       </div>
   </div>
@@ -25,9 +25,7 @@
           <td>pri@gmail.com</td>
           <td>98765554</td>
           <td>98765554</td> -->
-
-
-         <td>{{row.productName}}</td>
+      <td>{{row.productName}}</td>
           <td>{{row.productTyp}}</td>
           <td>{{row.unitType}}</td>
           <td>{{row.Price}}</td>
@@ -57,14 +55,14 @@
                   <div class="mb-3">
                     <label for="exampleInputlastname" class="form-label"> Product Type</label>
                     <!-- <input type="text" formControlName="lastName" class="form-control" id="exampleInputPassword1"> -->
-                     <select class="form-select" formControlName="productType" id="selectType" aria-label="Default select example">
+                     <select class="form-select" formControlName="productType"  aria-label="Default select example">
                       <option value="gold">Gold</option>
                       <option value="silver">Silver</option>
                     </select> 
                   </div>
                   <div class="mb-3">
                       <label for="exampleInputemail" class="form-label">Unit</label>
-                      <select class="form-select" formControlName="unitType" id="selectType" aria-label="Default select example">
+                      <select class="form-select" formControlName="unitType" aria-label="Default select example">
                         <option value="gold">Kg</option>
                         <option value="silver">gm</option>
                       </select> 
